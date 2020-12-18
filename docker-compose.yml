@@ -3,14 +3,14 @@ web:
   environment:
     MYENV: EXAMPLE
   volumes:
-    - .:/code
-# web_migrate:
-#   extends:
-#     service: web
+    - .:/home/latesttest
+web_migrate:
+  extends:
+    service: web
   command: python manage.py migrate
-# web_run:
-#   extends:
-#     service: web
+web_run:
+  extends:
+    service: web
   command: python manage.py runserver 0.0.0.0:8000
   ports:
     - "8000:8000"
