@@ -18,5 +18,7 @@ WORKDIR /code
 # RUN cd /home/latesttest
 RUN git clone https://github.com/mpbarbhaya/latesttest.git
 # WORKDIR /home/latesttest
-COPY latesttest /code/
+# COPY latesttest /code/
+RUN cd /latesttest
+# @ad
 RUN pip install -r requirements.txt
