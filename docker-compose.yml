@@ -3,7 +3,7 @@ web:
   environment:
     MYENV: EXAMPLE
   volumes:
-    - .:/home/latesttest
+    - .:/code
 web_migrate:
   extends:
     service: web
