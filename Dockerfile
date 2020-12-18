@@ -13,12 +13,14 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update
 RUN apt-get install -y git
 
-RUN mkdir /code
-WORKDIR /code
+# RUN mkdir /code
+# WORKDIR /code
 # RUN cd /home/latesttest
 RUN git clone https://github.com/mpbarbhaya/latesttest.git
 # WORKDIR /home/latesttest
 # COPY latesttest /code/
-RUN cd /latesttest
+# RUN cd /latesttest
+WORKDIR /latesttest
+
 # @ad
 RUN pip install -r requirements.txt
