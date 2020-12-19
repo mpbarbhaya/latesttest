@@ -4,10 +4,12 @@ RUN apt-get update
 RUN apt-get install -y git
 RUN ls
 RUN mkdir /code
-WORKDIR /code
 RUN ls
 RUN git clone https://github.com/mpbarbhaya/latesttest.git
 RUN ls
-COPY latesttest /code/
+RUN cd latesttest
+COPY . /code/
+WORKDIR /code
+
 RUN ls
 RUN pip install -r requirements.txt
